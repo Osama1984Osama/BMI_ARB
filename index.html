@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Calculator BMI</title>
+  </head>
+  <body>
+    <h1>{ حساب الوزن المثالي }</h1>
+    <p>ملاحظة : يرجى كتابة الطول بوضع نقطة بين الارقام لتتم العملية بنجاح كما هو موضح بالمثال  1.83</p>
+    <p>بعد الانتهاء يرجى الضغط على الصورة في الاسفل</p>
+    <form action="" class="bmi-calculator">
+      <br />
+      <div>
+        <input type="text" id="name" name="name"/>
+        <label for="name">أدخل أسمك من فضلك</label>
+      </div>
+      <div>
+        <br />
+
+        <input
+          type="number"
+          id="height"
+          name="height"
+          step="0.05"
+          min="0.5"
+          max="4"
+        />
+        <label for="height">ماهو طولك ب سم</label>
+      </div>
+      <div>
+        <br />
+
+        <input type="number" id="weight" name="weight" min="10" max="1000"/>
+        <label for="weight">ماهو وزنك ب كيلو غرام</label>
+      </div>
+      <br />
+      <div><span id="result"></span></div>
+      <br />
+      <div id="weight-normal" style="display: none">
+        وزنك قياسا لطولك طبيعي ومناسب جدا
+      </div>
+      <div id="weight-below" style="display: none">
+        وزنك قياسا لطولك تحت الحد الطبيعي
+      </div>
+      <div id="weight-above" style="display: none">
+        وزنك قياسا لطولك فوق الحد الطبيعي
+      </div>
+    </form><br>
+    <div id="smile"></div>
+    <div id="logo">
+      <img src="./img/m.jpg" alt="" />
+    </div>
+   
+    <script src="./app.js"></script>
+  </body>
+</html>
