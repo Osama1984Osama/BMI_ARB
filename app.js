@@ -37,10 +37,13 @@ window.addEventListener(
       }`;
     };
     const logo = document.getElementById("logo");
-    logo.addEventListener("click", () => {
-      heightObj.innerHTML = calculateBmi();
-      weightObj.innerHTML = calculateBmi(); 
-    });
+    if(calculateBmi){
+      logo.addEventListener("click", () => {
+        heightObj.innerHTML = calculateBmi();
+        weightObj.innerHTML = calculateBmi(); 
+      });
+    }
+   
     
     // heightObj.addEventListener("change", calculateBmi);
     // weightObj.addEventListener("change", calculateBmi);
